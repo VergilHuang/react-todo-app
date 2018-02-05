@@ -22,9 +22,9 @@ let Footer = ({ state, dispatch }) => {
 
     return (
         <div>
-          <button onClick={itemFinished}>完成</button>
-          <button onClick={itemDelete}>刪除</button>
-          <button style={{display:'none'}}>復原</button>
+          <button onClick={itemFinished}>Complish</button>
+          <button onClick={itemDelete}>Delete</button>
+          <button style={{display:'none'}}>Recover</button>
         </div>
     );
 };
