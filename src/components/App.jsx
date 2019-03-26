@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import UserContainer from '../containers/User-container.js';
+import User from './User.jsx';
 import List from './List.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
@@ -11,14 +11,14 @@ const App = () => {
   return (
     <Router>
       <div className="app-view">
-        <UserContainer></UserContainer>
-        <Header></Header>
+        <User />
+        <Header />
         <CommitNote />  
-        <List/>
+        <List />
         <Footer />
       </div>
     </Router>
   );
-}
+};
 
 export default App;

@@ -1,17 +1,31 @@
 import React from 'react';
-import {modifyUser} from '../actions/actions.js'
+import {connect} from 'react-redux';
+import {modifyUser} from '../actions/actions.js';
 
-const User = ({name, motto, dispatch}) => {
+let User = ({name, motto, dispatch}) => {
 
-	const handleMottoChange = (event) => {
-		dispatch(modifyUser(event.target.value))
-	}
+  const handleMottoChange = (event) => {
+    dispatch(modifyUser(event.target.value));
+  };
 
-    return (
-      <div className="user-view">
-        <label>{name}</label> - <input value={motto} onChange={handleMottoChange}/>
-      </div>
-    );
+  return (
+    <div className="user-view">
+      <label>{name}</label> - <input value={motto} onChange={handleMottoChange}/>
+    </div>
+  );
 };
+
+const mapStateToProps = (state) => ({
+  name: state.userInfo.name,
+  motto: state.userInfo.motto
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  dispatch: dispatch
+	
+});
+
+
+User = connect(mapStateToProps,mapDispatchToProps)(User);
 
 export default User;

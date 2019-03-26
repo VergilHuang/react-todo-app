@@ -1,41 +1,39 @@
-import React , { Component } from 'react';
-import {modifyDesc , toggleVisibility} from '../actions/actions.js';
+import React, { Component } from 'react';
+import { modifyDesc, toggleVisibility } from '../actions/actions.js';
 
 
-class UndoneList extends Component{
+class UndoneList extends Component {
 
-	constructor({todos , dispatch}){
-		super();
+    constructor({ todos, dispatch }) {
+        super();
 
-		this._todos = todos.filter(item =>  item.status === 'undone' )
-		this.dispatch = dispatch;
-	}
+        this._todos = todos.filter(item => item.status === 'undone')
+        this.dispatch = dispatch;
+    }
 
-	componentWillMount(){
-		this.dispatch(toggleVisibility(true));
-	}
+    componentWillMount() {
+        this.dispatch(toggleVisibility(true));
+    }
 
-	componentWillUpdate({todos , dispatch}){
-		this._todos = todos.filter(item =>  item.status === 'undone' );
-	}
+    componentWillUpdate({ todos, dispatch }) {
+        this._todos = todos.filter(item => item.status === 'undone');
+    }
 
-	itemDescChange = (event) => {
-		this.dispatch(modifyDesc(event.target.dataset.id , event.target.value));
-	}
+    itemDescChange = (event) => {
+        this.dispatch(modifyDesc(event.target.dataset.id, event.target.value));
+    }
 
-	respAreaHeight = (event) => {
-		const dom = event.nativeEvent.target;
-		dom.style.height = dom.scrollHeight+"px";
-		dom.style.height += "30px";
-	}
+    respAreaHeight = (event) => {
+        const dom = event.nativeEvent.target;
+        dom.style.height = dom.scrollHeight + "px";
+        dom.style.height += "30px";
+    }
 
-	render() {
-		return (
-			<div className="list-view">
+    render() {
+        return (
+            <div className="list-view">
 				<ol>
-					{this._todos.map((item, index) => {
-
-							return (
+					{this._todos.map((item, index) => (
 								<li key={item.id}>
 									<div className="list-item">
 										<div className="item-title">
@@ -49,13 +47,12 @@ class UndoneList extends Component{
 									</div>
 								</li>
 							)
-						}
 					)}
 				</ol>
 			</div>
-		);
-	}
-	
+        );
+    }
+
 }
 
 export default UndoneList;

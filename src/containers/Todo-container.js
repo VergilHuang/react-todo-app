@@ -4,15 +4,15 @@ import FinishedList from '../components/FinishedList.jsx';
 import DeleteList from '../components/DeleteList.jsx';
 
 const mapStateToProps = (state) => ({
-	todos: state.todos
-})
+  todos: state.todos
+});
 
 
 const mapDispatchToProps = (dispatch) => ({
-	dispatch: dispatch
-})
+  dispatch: dispatch
+});
 
-export const UndoneContainer = connect(mapStateToProps,mapDispatchToProps)(UndoneList)
-export const FinishedContainer = connect(mapStateToProps,mapDispatchToProps)(FinishedList)
-export const DeletedContainer = connect(mapStateToProps,mapDispatchToProps)(DeleteList)
+export const UndoneContainer = connect(mapStateToProps,mapDispatchToProps)(UndoneList);
+export const FinishedContainer = connect(mapStateToProps,mapDispatchToProps)(FinishedList);
+export const DeletedContainer = connect(mapStateToProps,mapDispatchToProps)(DeleteList);
 
