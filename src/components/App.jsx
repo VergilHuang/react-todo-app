@@ -5,19 +5,22 @@ import List from './List.jsx';
 import Header from './Header.jsx';
 import Footer from './Footer.jsx';
 import CommitNote from './CommitNote.jsx';
+import ErrorBoundary from '../error-component/ErrorBoundary.jsx';
 
 const App = () => {
 
   return (
-    <Router>
-      <div className="app-view">
-        <User />
-        <Header />
-        <CommitNote />  
-        <List />
-        <Footer />
-      </div>
-    </Router>
+    <ErrorBoundary>
+      <Router>
+        <div className="app-view">
+          <User />
+          <Header />
+          <CommitNote />  
+          <List />
+          <Footer />
+        </div>
+      </Router>
+    </ErrorBoundary>
   );
 };
 

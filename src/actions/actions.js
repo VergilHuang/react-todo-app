@@ -3,7 +3,6 @@ export const addTodo = (title) => ({
   type: 'ADD_TODO',
   title
 });
-
 export const addBatchTodo = (todos) => ({
   type: 'ADD_BATCH_TODO',
   todos

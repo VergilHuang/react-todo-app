@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 5, ../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../.rvm/gems/ruby-2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -93,8 +93,8 @@ a:hover {
 /* line 27, ../sass/screen.scss */
 .app-view {
   width: 100%;
-  height: 100%;
-  margin: 2vh auto;
+  height: 100vh;
+  margin: 0;
   background: #fff;
   transform-style: preserve-3d;
   padding: 12px 20px;
@@ -109,22 +109,29 @@ a:hover {
   font-size: 20px;
 }
 /* line 43, ../sass/screen.scss */
-.user-view span {
-  padding-left: 10px;
+.user-view input {
+  padding: 0;
+  outline: none;
+  border: none;
+  background: transparent;
 }
 
-/* line 51, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
+.router-list {
+  text-align: right;
+}
+/* line 55, ../sass/screen.scss */
 .router-list li {
   display: inline-block;
   margin-right: 12px;
 }
 
-/* line 57, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 .commit {
-  margin-top: 8px;
+  margin-top: 1rem;
   margin-bottom: 8px;
 }
-/* line 60, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 .commit input {
   font-size: 18px;
   width: 100%;
@@ -138,13 +145,13 @@ a:hover {
   outline-color: lightgray;
 }
 
-/* line 78, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 .list-view {
   padding: 20px 0px;
   height: 76vh;
   overflow: scroll;
 }
-/* line 82, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 .list-view li {
   line-height: 1.8;
   margin-bottom: 10px;
@@ -153,7 +160,7 @@ a:hover {
   transition: .4s ease;
   min-height: 58px;
 }
-/* line 89, ../sass/screen.scss */
+/* line 93, ../sass/screen.scss */
 .list-view li:after {
   content: '';
   width: 98%;
@@ -164,12 +171,12 @@ a:hover {
   bottom: 0;
   left: 1%;
 }
-/* line 99, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 .list-view li .list-item {
   margin-left: 10px;
   margin-right: 10px;
 }
-/* line 102, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 .list-view li .list-item .item-title {
   vertical-align: middle;
   font-size: 16px;
@@ -177,7 +184,7 @@ a:hover {
   padding-left: 40px;
   position: relative;
 }
-/* line 109, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 .list-view li .list-item .rounded-checkbox {
   display: inline-block;
   position: absolute;
@@ -188,7 +195,7 @@ a:hover {
   border: 1px solid #ccc;
   left: 0;
 }
-/* line 118, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 .list-view li .list-item .rounded-checkbox label {
   width: 26px;
   height: 26px;
@@ -198,7 +205,7 @@ a:hover {
   cursor: point;
   border-radius: 50px;
 }
-/* line 126, ../sass/screen.scss */
+/* line 130, ../sass/screen.scss */
 .list-view li .list-item .rounded-checkbox label:after {
   content: '';
   background: transparent;
@@ -213,19 +220,19 @@ a:hover {
   border-right: none;
   opacity: 0;
 }
-/* line 140, ../sass/screen.scss */
+/* line 144, ../sass/screen.scss */
 .list-view li .list-item .rounded-checkbox label:hover::after {
   opacity: 0.3;
 }
-/* line 145, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 .list-view li .list-item .rounded-checkbox input[type="checkbox"] {
   visibility: hidden;
 }
-/* line 147, ../sass/screen.scss */
+/* line 151, ../sass/screen.scss */
 .list-view li .list-item .rounded-checkbox input[type="checkbox"]:checked + label:after {
   opacity: 1;
 }
-/* line 152, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .list-view li .list-item textarea {
   font-size: 12px;
   color: #999;
@@ -238,7 +245,7 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-  /* line 172, ../sass/screen.scss */
+  /* line 176, ../sass/screen.scss */
   .app-view {
     width: 100%;
     height: 100vh;
